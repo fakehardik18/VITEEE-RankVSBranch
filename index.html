@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-themed Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the navbar */
+        body {
+            background-color: #1e1e1e;
+            /* Dark background color */
+            color: #ffffff;
+            /* White text color */
+        }
+
+        .navbar-custom {
+            background-color: #343a40;
+            /* Dark navbar color */
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: #ffffff;
+            /* White text color */
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #a8a8a8;
+            /* Light gray text color on hover */
+        }
+
+        .red-text {
+            color: red;
+            /* Red text color */
+        }
+
+        .card-custom {
+            background-color: #343a40;
+            /* Dark card background color */
+            color: #ffffff;
+            /* White text color */
+        }
+
+        .green-text {
+            color: #28a745 !important;
+            /* Green text color */
+        }
+
+        .red-text {
+            color: #dc3545 !important;
+            /* Red text color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand mr-auto" href="#">VITEEE Rank vs Branch</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-3 text-center">
+        <h2 class="red-text">Ranking data is based on last year may not be 100% accurate for this year</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter your rank" id="rankInput"
+                    style="color: #1e1e1e;">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="checkEligibility()">Submit</button>
+        </form>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card card-custom" id="velloreCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Vellore(cat 1 & 2)</h5>
+                        <ul class="list-unstyled">
+                            <li id="course1">CSE(1)</li>
+                            <li id="course2">CSE(2)</li>
+                            <li id="course6">CSE + specialization(1)</li>
+                            <li id="course7">CSE + specialization(2)</li>
+                            <li id="course11">IT(1)</li>
+                            <li id="course12">IT(2)</li>
+                            <li id="course26">electrical +CSE(1)</li>
+                            <li id="course27">electrical +CSE(2)</li>
+                            <li id="course31">ECE(1)</li>
+                            <li id="course32">ECE(2)</li>
+                            <li id="course36">ECE + specialization(1)</li>
+                            <li id="course37">ECE + specialization(2)</li>
+                            <li id="course56">EEE(1)</li>
+                            <li id="course57">EEE(2)</li>
+                            <li id="course61">Mechanical(1)</li>
+                            <li id="course62">Mechanical(2)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom" id="chennaiCard">
+                    <div class="card-body">
+                        <h5 class="card-title">Vellore(cat 3,4 & 5)</h5>
+                        <ul class="list-unstyled">
+                            <li id="course3">CSE(3)</li>
+                            <li id="course4">CSE(4)</li>
+                            <li id="course5">CSE(5)</li>
+                            <li id="course8">CSE + specialization(3)</li>
+                            <li id="course9">CSE + specialization(4)</li>
+                            <li id="course10">CSE + specialization(5)</li>
+                            <li id="course13">IT(3)</li>
+                            <li id="course14">IT(4)</li>
+                            <li id="course15">IT(5)</li>
+                            <li id="course28">electrical +CSE(3)</li>
+                            <li id="course29">electrical +CSE(4)</li>
+                            <li id="course30">electrical +CSE(5)</li>
+                            <li id="course33">ECE(3)</li>
+                            <li id="course34">ECE(4)</li>
+                            <li id="course35">ECE(5)</li>
+                            <li id="course38">ECE + specialization(3)</li>
+                            <li id="course39">ECE + specialization(4)</li>
+                            <li id="course40">ECE + specialization(5)</li>
+                            <li id="course58">EEE(3)</li>
+                            <li id="course59">EEE(4)</li>
+                            <li id="course60">EEE(5)</li>
+                            <li id="course63">Mechanical(3)</li>
+                            <li id="course64">Mechanical(4)</li>
+                            <li id="course65">Mechanical(5)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom" id="andhraCard">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <h5 class="card-title">Chennai (cat 1 & 2)</h5>
+                            <li id="course16">CSE(1)</li>
+                            <li id="course17">CSE(2)</li>
+                            <li id="course21">CSE + specialization(1)</li>
+                            <li id="course22">CSE + specialization(2)</li>
+                            <li id="course41">electrical +CSE(1)</li>
+                            <li id="course42">electrical +CSE(2)</li>
+                            <li id="course46">ECE(1)</li>
+                            <li id="course47">ECE(2)</li>
+                            <li id="course51">ECE + specialization(1)</li>
+                            <li id="course52">ECE + specialization(2)</li>
+                            <li id="course66">EEE(1)</li>
+                            <li id="course67">EEE(2)</li>
+                            <li id="course71">Mechanical(1)</li>
+                            <li id="course72">Mechanical(2)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-custom" id="bhopalCard">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <h5 class="card-title">Chennai (cat 3,4 & 5)</h5>
+                            <li id="course18">CSE(3)</li>
+                            <li id="course19">CSE(4)</li>
+                            <li id="course20">CSE(5)</li>
+                            <li id="course23">CSE + specialization(3)</li>
+                            <li id="course24">CSE + specialization(4)</li>
+                            <li id="course25">CSE + specialization(5)</li>
+                            <li id="course43">electrical +CSE(3)</li>
+                            <li id="course44">electrical +CSE(4)</li>
+                            <li id="course45">electrical +CSE(5)</li>
+                            <li id="course48">ECE(3)</li>
+                            <li id="course49">ECE(4)</li>
+                            <li id="course50">ECE(5)</li>
+                            <li id="course53">ECE + specialization(5)</li>
+                            <li id="course54">ECE + specialization(4)</li>
+                            <li id="course55">ECE + specialization(5)</li>
+                            <li id="course68">EEE(3)</li>
+                            <li id="course69">EEE(4)</li>
+                            <li id="course70">EEE(5)</li>
+                            <li id="course73">Mechanical(3)</li>
+                            <li id="course74">Mechanical(4)</li>
+                            <li id="course75">Mechanical(5)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function checkEligibility() {
+            var rank = document.getElementById('rankInput').value;
+
+            var cutoffs = {
+                'course1': 1000,
+                'course2': 3500,
+                'course3': 16000,
+                'course4': 23000,
+                'course5': 28000,
+                'course6': 2500,
+                'course7': 8000,
+                'course8': 20000,
+                'course9': 28000,
+                'course10': 32000,
+                'course11': 3500,
+                'course12': 10000,
+                'course13': 22000,
+                'course14': 28000,
+                'course15': 32000,
+                'course16': 5000,
+                'course17': 12000,
+                'course18': 22000,
+                'course19': 30000,
+                'course20': 38000,
+                'course21': 7000,
+                'course22': 20000,
+                'course23': 30000,
+                'course24': 38000,
+                'course25': 45000,
+                'course26': 5000,
+                'course27': 12000,
+                'course28': 24000,
+                'course29': 35000,
+                'course30': 55000,
+                'course31': 7000,
+                'course32': 14000,
+                'course33': 26000,
+                'course34': 40000,
+                'course35': 60000,
+                'course36': 9000,
+                'course37': 18000,
+                'course38': 30000,
+                'course39': 45000,
+                'course40': 60000,
+                'course41': 10000,
+                'course42': 20000,
+                'course43': 30000,
+                'course44': 40000,
+                'course45': 50000,
+                'course46': 12000,
+                'course47': 22000,
+                'course48': 34000,
+                'course49': 44000,
+                'course50': 54000,
+                'course51': 14000,
+                'course52': 25000,
+                'course53': 40000,
+                'course54': 55000,
+                'course55': 75000,
+                'course56': 15000,
+                'course57': 25000,
+                'course58': 35000,
+                'course59': 50000,
+                'course60': 70000,
+                'course61': 25000,
+                'course62': 40000,
+                'course63': 55000,
+                'course64': 75000,
+                'course65': 90000,
+                'course66': 20000,
+                'course67': 32000,
+                'course68': 48000,
+                'course69': 65000,
+                'course70': 90000,
+                'course71': 30000,
+                'course72': 45000,
+                'course73': 60000,
+                'course74': 80000,
+                'course75': 100000
+            };
+
+            for (var course in cutoffs) {
+                var element = document.getElementById(course);
+                if (parseInt(rank) <= cutoffs[course]) {
+                    element.classList.remove('red-text');
+                    element.classList.add('green-text');
+                } else {
+                    element.classList.remove('green-text');
+                    element.classList.add('red-text');
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
