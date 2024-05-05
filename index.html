@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VITEEE Rank vs Branch</title>
+    <title>Dark-themed Navbar</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -61,15 +61,25 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
         <div class="container">
             <a class="navbar-brand mr-auto" href="#">VITEEE Rank vs Branch</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Updated button with additional text below it -->
+            <div class="ml-auto">
+                <button class="btn btn-danger" onClick="location.href='https://www.instagram.com/realhardik18'">Created
+                    by
+                    realhardik18</button>
+            </div>
         </div>
     </nav>
 
+
     <div class="container mt-3 text-center">
-        <h2 class="red-text">Ranking data is based on last year may not be 100% accurate for this year</h2>
+        <h2 class="red-text">Ranking data is based on last year data + estimation</h2>
+        <h2 class="red-text" style="font-size: large;">May not be 100% accurate for this year</h2>
         <form>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Enter your rank" id="rankInput"
@@ -153,8 +163,8 @@
                             <li id="course42">electrical +CSE(2)</li>
                             <li id="course46">ECE(1)</li>
                             <li id="course47">ECE(2)</li>
-                            <li id="course51">ECM(1)</li>
-                            <li id="course52">ECM(2)</li>
+                            <li id="course51">ECE + specialization(1)</li>
+                            <li id="course52">ECE + specialization(2)</li>
                             <li id="course66">EEE(1)</li>
                             <li id="course67">EEE(2)</li>
                             <li id="course71">Mechanical(1)</li>
@@ -181,9 +191,9 @@
                             <li id="course48">ECE(3)</li>
                             <li id="course49">ECE(4)</li>
                             <li id="course50">ECE(5)</li>
-                            <li id="course53">ECM(3)</li>
-                            <li id="course54">ECM(4)</li>
-                            <li id="course55">ECM(5)</li>
+                            <li id="course53">ECE + specialization(5)</li>
+                            <li id="course54">ECE + specialization(4)</li>
+                            <li id="course55">ECE + specialization(5)</li>
                             <li id="course68">EEE(3)</li>
                             <li id="course69">EEE(4)</li>
                             <li id="course70">EEE(5)</li>
@@ -194,110 +204,179 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="container mt-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="card card-custom" id="velloreCard">
+                            <div class="card-body">
+                                <h5 class="card-title">Bhopal(cat 1 & 2)</h5>
+                                <ul class="list-unstyled">
+                                    <li id="course76">CSE(1)</li>
+                                    <li id="course77">CSE(2)</li>
+                                    <li id="course79">CSE + specialization(1)</li>
+                                    <li id="course80">CSE + specialization(2)</li>
+                                    <li id="course81">ECE(1)</li>
+                                    <li id="course82">ECE(2)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-custom" id="chennaiCard">
+                            <div class="card-body">
+                                <h5 class="card-title">Bhopal(cat 3)</h5>
+                                <ul class="list-unstyled">
+                                    <li id="course78">CSE(3)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-custom" id="andhraCard">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <h5 class="card-title">AP (cat 1 & 2)</h5>
+                                    <li id="course83">CSE(1)</li>
+                                    <li id="course84">CSE(2)</li>
+                                    <li id="course86">CSE + specialization(1)</li>
+                                    <li id="course87">CSE + specialization(2)</li>
+                                    <li id="course88">ECE(1)</li>
+                                    <li id="course89">ECE(2)</li>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-custom" id="bhopalCard">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <h5 class="card-title">AP (cat 3)</h5>
+                                    <li id="course85">CSE(3)</li>
+                                </ul>
+                            </div>
+                        </div>
 
-    <script>
-        function checkEligibility() {
-            var rank = document.getElementById('rankInput').value;
+                    </div>
+                </div>
 
-            var cutoffs = {
-                'course1': 1000,
-                'course2': 3500,
-                'course3': 16000,
-                'course4': 23000,
-                'course5': 28000,
-                'course6': 2500,
-                'course7': 8000,
-                'course8': 20000,
-                'course9': 28000,
-                'course10': 32000,
-                'course11': 3500,
-                'course12': 10000,
-                'course13': 22000,
-                'course14': 28000,
-                'course15': 32000,
-                'course16': 5000,
-                'course17': 12000,
-                'course18': 22000,
-                'course19': 30000,
-                'course20': 38000,
-                'course21': 7000,
-                'course22': 20000,
-                'course23': 30000,
-                'course24': 38000,
-                'course25': 45000,
-                'course26': 5000,
-                'course27': 12000,
-                'course28': 24000,
-                'course29': 35000,
-                'course30': 55000,
-                'course31': 7000,
-                'course32': 14000,
-                'course33': 26000,
-                'course34': 40000,
-                'course35': 60000,
-                'course36': 9000,
-                'course37': 18000,
-                'course38': 30000,
-                'course39': 45000,
-                'course40': 60000,
-                'course41': 10000,
-                'course42': 20000,
-                'course43': 30000,
-                'course44': 40000,
-                'course45': 50000,
-                'course46': 12000,
-                'course47': 22000,
-                'course48': 34000,
-                'course49': 44000,
-                'course50': 54000,
-                'course51': 14000,
-                'course52': 25000,
-                'course53': 40000,
-                'course54': 55000,
-                'course55': 75000,
-                'course56': 15000,
-                'course57': 25000,
-                'course58': 35000,
-                'course59': 50000,
-                'course60': 70000,
-                'course61': 25000,
-                'course62': 40000,
-                'course63': 55000,
-                'course64': 75000,
-                'course65': 90000,
-                'course66': 20000,
-                'course67': 32000,
-                'course68': 48000,
-                'course69': 65000,
-                'course70': 90000,
-                'course71': 30000,
-                'course72': 45000,
-                'course73': 60000,
-                'course74': 80000,
-                'course75': 100000
-            };
+                <!-- Bootstrap JS and dependencies -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            for (var course in cutoffs) {
-                var element = document.getElementById(course);
-                if (parseInt(rank) <= cutoffs[course]) {
-                    element.classList.remove('red-text');
-                    element.classList.add('green-text');
-                } else {
-                    element.classList.remove('green-text');
-                    element.classList.add('red-text');
-                }
-            }
-        }
-     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };        
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+                <script>
+                    function checkEligibility() {
+                        var rank = document.getElementById('rankInput').value;
+
+                        var cutoffs = {
+                            'course1': 1000,
+                            'course2': 3500,
+                            'course3': 16000,
+                            'course4': 23000,
+                            'course5': 28000,
+                            'course6': 2500,
+                            'course7': 8000,
+                            'course8': 20000,
+                            'course9': 28000,
+                            'course10': 32000,
+                            'course11': 3500,
+                            'course12': 10000,
+                            'course13': 22000,
+                            'course14': 28000,
+                            'course15': 32000,
+                            'course16': 5000,
+                            'course17': 12000,
+                            'course18': 22000,
+                            'course19': 30000,
+                            'course20': 38000,
+                            'course21': 7000,
+                            'course22': 20000,
+                            'course23': 30000,
+                            'course24': 38000,
+                            'course25': 45000,
+                            'course26': 5000,
+                            'course27': 12000,
+                            'course28': 24000,
+                            'course29': 35000,
+                            'course30': 55000,
+                            'course31': 7000,
+                            'course32': 14000,
+                            'course33': 26000,
+                            'course34': 40000,
+                            'course35': 60000,
+                            'course36': 9000,
+                            'course37': 18000,
+                            'course38': 30000,
+                            'course39': 45000,
+                            'course40': 60000,
+                            'course41': 10000,
+                            'course42': 20000,
+                            'course43': 30000,
+                            'course44': 40000,
+                            'course45': 50000,
+                            'course46': 12000,
+                            'course47': 22000,
+                            'course48': 34000,
+                            'course49': 44000,
+                            'course50': 54000,
+                            'course51': 14000,
+                            'course52': 25000,
+                            'course53': 40000,
+                            'course54': 55000,
+                            'course55': 75000,
+                            'course56': 15000,
+                            'course57': 25000,
+                            'course58': 35000,
+                            'course59': 50000,
+                            'course60': 70000,
+                            'course61': 25000,
+                            'course62': 40000,
+                            'course63': 55000,
+                            'course64': 75000,
+                            'course65': 90000,
+                            'course66': 20000,
+                            'course67': 32000,
+                            'course68': 48000,
+                            'course69': 65000,
+                            'course70': 90000,
+                            'course71': 30000,
+                            'course72': 45000,
+                            'course73': 60000,
+                            'course74': 80000,
+                            'course75': 100000,
+                            'course76': 50000,
+                            'course77': 100000,
+                            'course78': 160000,
+                            'course79': 90000,
+                            'course80': 160000,
+                            'course81': 100000,
+                            'course82': 200000,
+                            'course83': 70000,
+                            'course84': 120000,
+                            'course85': 190000,
+                            'course86': 90000,
+                            'course87': 150000,
+                            'course88': 100000,
+                            'course89': 170000,
+
+
+                        };
+
+                        for (var course in cutoffs) {
+                            var element = document.getElementById(course);
+                            if (parseInt(rank) <= cutoffs[course]) {
+                                element.classList.remove('red-text');
+                                element.classList.add('green-text');
+                            } else {
+                                element.classList.remove('green-text');
+                                element.classList.add('red-text');
+                            }
+                        }
+                    }
+                    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };        
+                </script>
+                <script defer src="/_vercel/insights/script.js"></script>
 
 
 </body>
